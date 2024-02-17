@@ -23,9 +23,6 @@ spring:
     port: 6379
 mybatis-plus:
   mapper-locations: classpath:/src/main/resources/mapper/*Mapper.xml
-aliyun:
-  accessKeyId: LTAI5tGPD6q12AYX4WUcHRay
-  accessKeySecret: fX2lUfih1cqAJ7BrsjzPlJucwkimrx
 # alipay config
 # 支付宝网关
 alipay:
