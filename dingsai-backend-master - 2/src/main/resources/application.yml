@@ -1,0 +1,44 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/dingsai
+  data:
+    mongodb:
+      database: dingsai
+      authentication-database: admin
+      uri: mongodb://root:123456@localhost:27017
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+mybatis-plus:
+  mapper-locations: classpath:/src/main/resources/mapper/*Mapper.xml
+aliyun:
+  accessKeyId: LTAI5tGPD6q12AYX4WUcHRay
+  accessKeySecret: fX2lUfih1cqAJ7BrsjzPlJucwkimrx
+# alipay config
+# 支付宝网关
+alipay:
+  gatewayUrl: https://openapi-sandbox.dl.alipaydev.com/gateway.do
+  # 应用ID
+  appId: 9021000134661505
+  # 商户私钥
+  merchantPrivateKey: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCQNNm52ooHQePFN7s0LDenAznQWlVDKtUjPSlfH3pMkV/iVpLBP2J8Wyvh3Gh0yX4bhDjxRzC5ETmI2dA6yVLsX+eAYXTwEBC3U0lqfmsdN3+Cc3lb9+e1KpuB+jXa7mD8Y+5H61bFQkEZ7JBBc3ewCZHMjoYQ8ZEfJnFP3+WQqWoJmNBxZHXyYhTY8gD3rAGS0OqxY4qqL56QlPB039Quy4Am2G6flgX0evnG3HAfv08T2NTTZ5bhDG9cFqK1NOvffsKAi2PE08a2cFHJtnmReIrUjehCW/V+k0fqlHc8+amQMzHLpGbTlYeHrzrRDs99XbQ0Zu80eFK4iK2HeL1PAgMBAAECggEAQqo8ESBHeQ1r16to/riGTc4+9uQb0H5HpA/NRW1O44C9O+xb0byUsfqP8c0r+PmBNAVPMbOAgb3FxE81ZUfW7vFzGzVyktxKbgWxxeqFaC9U4iCx9ONJGcaFt3PNW9WhvmwQJu1T4sM7R1nGYouXxCjYXyFwNvsF5Mmnzo4qGVKVB3EPrGssRQ+d1X8GAK73nIIp/rydqsgTbSnHD9spbyjqs2/3bQ7dKL0h4+4+Ae41Myy9kvHt8PBlOjkXbZ6he57UcR3NnaH0leKEZozNVFVLS6tus24oqXr0AFNHWh4X+NXllZtZ1/sOOxgpR4TOiashqydBwPJrgngB8VDJGQKBgQDdR3nlMcZUN5Px9jAdMHMOjqJwLiIXSJ1K92s0RpixIe2APJ1+v0rbTCHfZc0HfS2mxSGODOaqWJxXizNN3EEQ7MAHiK9XomhNTBj8FyoD+Vj6C39GdAnu4pEfwoEBN5TrxiP06GHM8t211Z8bHZpe8LZR7yoH16LRDl5h47i02wKBgQCm1XPwTB/hFnFm40p5glDIiSf1qMI2RQoIDDQm0aAPFLjwx1GmolRkUCorDutyiV7Fud3pGLB8+RG76XlQ9GE1zjbkioTDsznDUVIeb5vL6j+6atH10FdQhZYSqqnZ5sJ5EZH+PM94ag0zjNA/4U1Vg89QcHEW+7qS0YlPBExpnQKBgHbRpaOriZq5SUj48DcMSAv+DT19mDK2fDfACaHFcsJSvIxKgCuKHnEJPXsO1/x4fCX73pu/U7EO6cycY40ggxPKfQbOn5DIFYfEH/plmdsObne96rbzIk5S/Kh4MftsVBwShkZA7hs2IlU8gzX1PGpUiSIP8ZrKcJQfShD4TbtXAoGAZ68dAOiun1stWz5DGMUuo5LqLLiXCtdZZqr+9mktSnIchje5vRAB1t4jduMs3OAW8FeVXLqlZOX+aYSuiut2RtRENUEJRf7rFUJDAPtoHhEVTiv5FQZIXZjILg22xd+uWUPcMd9lKXbvgWwwOKMzRsRGYb2f6yLDT1++MEeBndkCgYEAij3z1KeiCUbiYyzb6nuhMXmthwl+bxUS4QUC7wJKDY8YXN6/kqsvAeiy/huisImh96kKgYxFRlW/nWifFPnMAuafY78ma8DB7uQxdNAYU0/OmneRvSLweDWWHdd/Rc9XotIYY3Vhc2FXAzi82l36DJqVtZepVB3L8l/00V6FSV4=
+  # 支付宝公钥
+  alipayPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkqftIYU0tzCV+5sRPReUypI0AjCzOPr63rZai5pWGJudnyxIEKGo3vagDDQK9A9/jP+aPDXohSNw6Q4z5J+lnEWk7Hqgpv6PCWyXBbDJOnPFBPnS0TT9IxQuRuYc6insLMxtCtqbl52ZaiQ6x7Ba7fDQjqGEr+JuQfPzinvc4haZN8Z3s3pLBIBdhk/1MjERlQJFy3oFugrssitEhVYFzqt/zWeWnCMFYnGr8xNFXIIethSZ2ZxwEoNTjX2WQQJfaPXS4lwgbEog2zzgE9qbmafS8+dyLyZs7xveHJx7vbjeN7ZPJblosRnu9szKEJMchzUe60J+tKElnyjlrKZ9lQIDAQAB
+  # 编码
+  charset: UTF-8
+  # 数据格式
+  format: json
+  # 签名方式
+  signType: RSA2
